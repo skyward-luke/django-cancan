@@ -9,7 +9,7 @@ from .ability import Ability
 
 def get_validator(request, declare_abilities):
     access_rules = AccessRules(request.user)
-    declare_abilities(request.user, access_rules)
+    declare_abilities(request, access_rules)
     return Ability(access_rules)
 
 
